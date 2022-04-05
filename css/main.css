@@ -63,46 +63,36 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   list-style-type: none;
-  overflow: hidden;
 }
 
 .insta__item {
-  width: 181px;
-  height: 321px;
-}
-
-.insta__listbox {
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  list-style-type: none;
-}
-
-.insta__itembox {
-  border-radius: 15px;
   margin-right: 40px;
 }
 
-.insta__box {
+.insta__imgbox {
+  position: relative;
   width: 181px;
   height: 321px;
-  position: relative;
-  border-radius: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.insta__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .insta__head {
   width: 100%;
   position: absolute;
-  top: 20px;
+  top: 15px;
+  padding: 0 20px;
+}
+
+.insta__hrbox {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,8 +102,20 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  align-items: center;
-  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.insta__head-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .insta__head-flex {
@@ -166,16 +168,22 @@ html {
   margin-right: 10px;
 }
 
-.insta__imgbox {
-  width: 181px;
-  height: 321px;
+.insta__center {
+  position: absolute;
+  top: 40%;
+  left: 33%;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #99123f;
+  border-radius: 50%;
+  padding: 5px;
   overflow: hidden;
-  border-radius: 15px;
 }
 
-.insta__img {
+.insta__center-img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -235,33 +243,336 @@ html {
   color: #fff;
 }
 
-.insta__prevbtn, .insta__nextbtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.active {
+  width: 400px;
+  height: 600px;
+}
+
+.one {
+  -webkit-transform: translateX(70%);
+          transform: translateX(70%);
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.hrone,
+.hrtwo,
+.hrthree {
+  position: relative;
+  width: 32%;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #ffffff79;
+}
+
+.hrone::before,
+.hrtwo::before,
+.hrthree::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
   position: absolute;
-  top: 50%;
-  background: none;
-  border: none;
+  -webkit-animation: hrone 5s linear both;
+          animation: hrone 5s linear both;
 }
 
-.insta__prevbtn {
-  left: 10px;
+.hrtwo::before {
+  -webkit-animation: hrone 5s linear 5s both;
+          animation: hrone 5s linear 5s both;
 }
 
-.insta__nextbtn {
-  right: 10px;
+.hrthree::before {
+  -webkit-animation: hrone 5s linear 10s both;
+          animation: hrone 5s linear 10s both;
 }
 
-.insta__iconbtns {
-  font-size: 40px;
-  color: #fff;
+@-webkit-keyframes hrone {
+  0% {
+    width: 0%;
+    background-color: #fff;
+  }
+  10% {
+    width: 10%;
+    background-color: #fff;
+  }
+  20% {
+    width: 20%;
+    background-color: #fff;
+  }
+  30% {
+    width: 30%;
+    background-color: #fff;
+  }
+  40% {
+    width: 40%;
+    background-color: #fff;
+  }
+  50% {
+    width: 50%;
+    background-color: #fff;
+  }
+  60% {
+    width: 60%;
+    background-color: #fff;
+  }
+  70% {
+    width: 70%;
+    background-color: #fff;
+  }
+  80% {
+    width: 80%;
+    background-color: #fff;
+  }
+  90% {
+    width: 90%;
+    background-color: #fff;
+  }
+  100% {
+    width: 100%;
+    background-color: #fff;
+  }
+}
+
+@keyframes hrone {
+  0% {
+    width: 0%;
+    background-color: #fff;
+  }
+  10% {
+    width: 10%;
+    background-color: #fff;
+  }
+  20% {
+    width: 20%;
+    background-color: #fff;
+  }
+  30% {
+    width: 30%;
+    background-color: #fff;
+  }
+  40% {
+    width: 40%;
+    background-color: #fff;
+  }
+  50% {
+    width: 50%;
+    background-color: #fff;
+  }
+  60% {
+    width: 60%;
+    background-color: #fff;
+  }
+  70% {
+    width: 70%;
+    background-color: #fff;
+  }
+  80% {
+    width: 80%;
+    background-color: #fff;
+  }
+  90% {
+    width: 90%;
+    background-color: #fff;
+  }
+  100% {
+    width: 100%;
+    background-color: #fff;
+  }
+}
+
+@-webkit-keyframes hrtwo {
+  0% {
+    width: 0%;
+    background-color: #fff;
+  }
+  10% {
+    width: 10%;
+    background-color: #fff;
+  }
+  20% {
+    width: 20%;
+    background-color: #fff;
+  }
+  30% {
+    width: 30%;
+    background-color: #fff;
+  }
+  40% {
+    width: 40%;
+    background-color: #fff;
+  }
+  50% {
+    width: 50%;
+    background-color: #fff;
+  }
+  60% {
+    width: 60%;
+    background-color: #fff;
+  }
+  70% {
+    width: 70%;
+    background-color: #fff;
+  }
+  80% {
+    width: 80%;
+    background-color: #fff;
+  }
+  90% {
+    width: 90%;
+    background-color: #fff;
+  }
+  100% {
+    width: 100%;
+    background-color: #fff;
+  }
+}
+
+@keyframes hrtwo {
+  0% {
+    width: 0%;
+    background-color: #fff;
+  }
+  10% {
+    width: 10%;
+    background-color: #fff;
+  }
+  20% {
+    width: 20%;
+    background-color: #fff;
+  }
+  30% {
+    width: 30%;
+    background-color: #fff;
+  }
+  40% {
+    width: 40%;
+    background-color: #fff;
+  }
+  50% {
+    width: 50%;
+    background-color: #fff;
+  }
+  60% {
+    width: 60%;
+    background-color: #fff;
+  }
+  70% {
+    width: 70%;
+    background-color: #fff;
+  }
+  80% {
+    width: 80%;
+    background-color: #fff;
+  }
+  90% {
+    width: 90%;
+    background-color: #fff;
+  }
+  100% {
+    width: 100%;
+    background-color: #fff;
+  }
+}
+
+@-webkit-keyframes hrthree {
+  0% {
+    width: 0%;
+    background-color: #fff;
+  }
+  10% {
+    width: 10%;
+    background-color: #fff;
+  }
+  20% {
+    width: 20%;
+    background-color: #fff;
+  }
+  30% {
+    width: 30%;
+    background-color: #fff;
+  }
+  40% {
+    width: 40%;
+    background-color: #fff;
+  }
+  50% {
+    width: 50%;
+    background-color: #fff;
+  }
+  60% {
+    width: 60%;
+    background-color: #fff;
+  }
+  70% {
+    width: 70%;
+    background-color: #fff;
+  }
+  80% {
+    width: 80%;
+    background-color: #fff;
+  }
+  90% {
+    width: 90%;
+    background-color: #fff;
+  }
+  100% {
+    width: 100%;
+    background-color: #fff;
+  }
+}
+
+@keyframes hrthree {
+  0% {
+    width: 0%;
+    background-color: #fff;
+  }
+  10% {
+    width: 10%;
+    background-color: #fff;
+  }
+  20% {
+    width: 20%;
+    background-color: #fff;
+  }
+  30% {
+    width: 30%;
+    background-color: #fff;
+  }
+  40% {
+    width: 40%;
+    background-color: #fff;
+  }
+  50% {
+    width: 50%;
+    background-color: #fff;
+  }
+  60% {
+    width: 60%;
+    background-color: #fff;
+  }
+  70% {
+    width: 70%;
+    background-color: #fff;
+  }
+  80% {
+    width: 80%;
+    background-color: #fff;
+  }
+  90% {
+    width: 90%;
+    background-color: #fff;
+  }
+  100% {
+    width: 100%;
+    background-color: #fff;
+  }
 }
 
 /* FOOTER PART */
